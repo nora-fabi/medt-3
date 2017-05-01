@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<title>Anfang</title>
+	<style>
+		body{
+			margin-top: 40px;
+		}
+		#add{
+			margin-right: 10px;
+			font-size: 16pt;
+		}
+		#remove{
+			font-size: 16pt;
+		}
+	</style>
+	<script
+	src="https://code.jquery.com/jquery-3.2.1.min.js"
+	integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
+	<script>
+		var counter = 0;
+		$(document).ready(function(){
+			$('#add').click(function(){
+				$('#myList').append('<li class="myElement">element'+counter+'</li>');
+				counter = counter + 1;
+			});
+			$('#remove').click(function(){
+				$('.myElement').last().remove();
+				counter= counter -1;
+			});
+		});
+	</script>
+	</head>
+	<body>
+		<div class="container">
+			<span class="glyphicon glyphicon-plus" id="add"></span>
+			<span class="glyphicon glyphicon-minus" id="remove"></span><br>
+			<h2>Liste</h2>
+			<ul id="myList">
+			</ul>
+		</div>
+	</body>
+</html>
