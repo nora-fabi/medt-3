@@ -1,4 +1,4 @@
-<?php require "isLogedIn.php";
+<?php require "isLoggedIn.php";
 	if(isset($_POST['logOut'])) 
 	{
 		session_unset();
